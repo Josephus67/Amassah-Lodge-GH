@@ -53,14 +53,14 @@ export function ReviewForm({ onSubmit, onClose }: ReviewFormProps) {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div className="fixed inset-0 z-50 flex items-start justify-center p-4 overflow-y-auto">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm"
         />
 
         {/* Modal */}
@@ -69,7 +69,7 @@ export function ReviewForm({ onSubmit, onClose }: ReviewFormProps) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
           transition={{ duration: 0.3 }}
-          className="relative w-full max-w-2xl"
+          className="relative w-full max-w-2xl my-4 md:my-8"
         >
           <Card>
             <CardHeader>
@@ -88,8 +88,8 @@ export function ReviewForm({ onSubmit, onClose }: ReviewFormProps) {
                 </Button>
               </div>
             </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit(handleFormSubmit)} className="space-y-6">
+            <CardContent className="max-h-[70vh] overflow-y-auto">
+              <form onSubmit={handleSubmit(handleFormSubmit)} className="space-y-4 md:space-y-6">
                 {/* Name */}
                 <div>
                   <Label htmlFor="review-name">Your Name *</Label>
@@ -111,37 +111,37 @@ export function ReviewForm({ onSubmit, onClose }: ReviewFormProps) {
                 <div>
                   <Label>Your Rating *</Label>
                   <div className="mt-2">
-                    <div className="flex items-center space-x-1">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <button
-                          key={star}
-                          type="button"
-                          onClick={() => setRating(star)}
-                          onMouseEnter={() => setHoverRating(star)}
-                          onMouseLeave={() => setHoverRating(0)}
-                          className="focus:outline-none transition-transform duration-150 hover:scale-110"
-                        >
-                          <Star
-                            className={`w-8 h-8 ${
-                              star <= (hoverRating || rating)
-                                ? 'fill-yellow-400 text-yellow-400'
-                                : 'text-gray-300'
-                            }`}
-                          />
-                        </button>
-                      ))}
-                      <span className="ml-3 text-sm text-muted-foreground">
-                        {rating > 0 && (
-                          <>
-                            {rating} star{rating !== 1 ? 's' : ''} -{' '}
-                            {rating === 1 && 'Poor'}
-                            {rating === 2 && 'Fair'}
-                            {rating === 3 && 'Good'}
-                            {rating === 4 && 'Very Good'}
-                            {rating === 5 && 'Excellent'}
-                          </>
-                        )}
-                      </span>
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-2 sm:space-y-0">
+                      <div className="flex items-center space-x-1">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <button
+                            key={star}
+                            type="button"
+                            onClick={() => setRating(star)}
+                            onMouseEnter={() => setHoverRating(star)}
+                            onMouseLeave={() => setHoverRating(0)}
+                            className="focus:outline-none transition-transform duration-150 hover:scale-110 p-1"
+                          >
+                            <Star
+                              className={`w-6 h-6 md:w-8 md:h-8 ${
+                                star <= (hoverRating || rating)
+                                  ? 'fill-yellow-400 text-yellow-400'
+                                  : 'text-gray-300'
+                              }`}
+                            />
+                          </button>
+                        ))}
+                      </div>
+                      {rating > 0 && (
+                        <span className="text-xs md:text-sm text-muted-foreground">
+                          {rating} star{rating !== 1 ? 's' : ''} -{' '}
+                          {rating === 1 && 'Poor'}
+                          {rating === 2 && 'Fair'}
+                          {rating === 3 && 'Good'}
+                          {rating === 4 && 'Very Good'}
+                          {rating === 5 && 'Excellent'}
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -156,8 +156,8 @@ export function ReviewForm({ onSubmit, onClose }: ReviewFormProps) {
                       minLength: { value: 20, message: 'Review must be at least 20 characters' }
                     })}
                     placeholder="Share your experience with us... Tell future guests what made your stay special."
-                    rows={6}
-                    className={errors.comment ? 'border-red-500' : ''}
+                    rows={4}
+                    className={`resize-none ${errors.comment ? 'border-red-500' : ''}`}
                   />
                   {errors.comment && (
                     <p className="text-red-500 text-sm mt-1">{errors.comment.message}</p>
@@ -168,9 +168,9 @@ export function ReviewForm({ onSubmit, onClose }: ReviewFormProps) {
                 </div>
 
                 {/* Guidelines */}
-                <div className="bg-accent/50 rounded-lg p-4">
-                  <h4 className="font-semibold text-foreground mb-2">Review Guidelines</h4>
-                  <ul className="text-sm text-muted-foreground space-y-1">
+                <div className="bg-accent/50 rounded-lg p-3 md:p-4">
+                  <h4 className="font-semibold text-foreground mb-2 text-sm md:text-base">Review Guidelines</h4>
+                  <ul className="text-xs md:text-sm text-muted-foreground space-y-1">
                     <li>• Be honest and constructive in your feedback</li>
                     <li>• Focus on your personal experience</li>
                     <li>• Avoid offensive language or personal attacks</li>
@@ -179,19 +179,19 @@ export function ReviewForm({ onSubmit, onClose }: ReviewFormProps) {
                 </div>
 
                 {/* Actions */}
-                <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                <div className="flex flex-col sm:flex-row gap-3 pt-2 md:pt-4 sticky bottom-0 bg-card pb-4 -mx-6 px-6 border-t border-border mt-4">
                   <Button
                     type="button"
                     variant="outline"
                     onClick={onClose}
-                    className="flex-1"
+                    className="flex-1 text-sm md:text-base"
                   >
                     Cancel
                   </Button>
                   <Button
                     type="submit"
                     disabled={isSubmitting || rating === 0}
-                    className="flex-1 bg-teal-500 hover:bg-teal-600 text-white"
+                    className="flex-1 bg-teal-500 hover:bg-teal-600 text-white text-sm md:text-base"
                   >
                     {isSubmitting ? (
                       'Submitting...'

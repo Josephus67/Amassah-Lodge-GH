@@ -164,9 +164,9 @@ export function Footer() {
                   <MapPin className="w-5 h-5 text-teal-400 mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="text-background/80 text-sm">
-                      123 Luxury Avenue<br />
-                      City Center, State 12345<br />
-                      United States
+                      Kukuazugu<br />
+                      Walewale<br />
+                      Ghana
                     </p>
                   </div>
                 </div>
@@ -177,7 +177,7 @@ export function Footer() {
                     href="tel:+15551234567" 
                     className="text-background/80 hover:text-teal-400 transition-colors duration-200 text-sm"
                   >
-                    +1 (555) 123-4567
+                    +233 559823861
                   </a>
                 </div>
                 
@@ -187,7 +187,7 @@ export function Footer() {
                     href="mailto:info@amassahlodge.com" 
                     className="text-background/80 hover:text-teal-400 transition-colors duration-200 text-sm"
                   >
-                    info@amassahlodge.com
+                    bawahjosephus67@gmail.com
                   </a>
                 </div>
               </div>
@@ -230,14 +230,14 @@ export function Footer() {
               <span>© {currentYear} AMASSAH LODGE. All rights reserved.</span>
               <span className="hidden md:inline">•</span>
               <span className="flex items-center space-x-1">
-                <span>Made with</span>
+                <span>Be Our</span>
                 <Heart className="w-4 h-4 text-red-400 fill-current" />
-                <span>for our guests</span>
+                <span>lovely guest</span>
               </span>
             </div>
             
             <div className="flex items-center space-x-4 text-sm text-background/60">
-              <span>Powered by React & Tailwind CSS</span>
+              <span>Amassah Lodge</span>
             </div>
           </div>
         </motion.div>
