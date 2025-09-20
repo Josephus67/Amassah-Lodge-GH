@@ -178,10 +178,17 @@ export const blogPosts = [
 export const chatbotResponses = {
   hello: "Hello! Welcome to AMASSAH LODGE. How can I assist you today?",
   hi: "Hi there! I'm here to help with any questions about our hotel. What would you like to know?",
-  rooms: "We offer various room types: Luxury Suites, Deluxe Rooms, Family Suites, Executive Rooms, Standard Rooms, and our exclusive Penthouse Suite. Would you like details about any specific room?",
-  amenities: "Our amenities include: Free WiFi, Fitness Center, Swimming Pool, Spa Services, Restaurant, Room Service, Business Center, Concierge, and Parking. What would you like to know more about?",
-  checkin: "Check-in time is 3:00 PM and check-out is 11:00 AM. Early check-in and late check-out may be available upon request.",
-  location: "AMASSAH LODGE is conveniently located in the heart of the city with easy access to major attractions, shopping, and dining.",
-  booking: "You can make a reservation through our website, call us directly, or book through major travel platforms. Would you like help with a specific booking?",
-  default: "I'm here to help! You can ask me about rooms, amenities, check-in times, location, or booking. What would you like to know?"
+  rooms: "We offer various room types: Luxury Suites ($299), Deluxe Rooms ($199), Family Suites ($249), Executive Rooms ($259), Standard Rooms ($149), and our exclusive Penthouse Suite ($499). Would you like details about any specific room?",
+  amenities: "Our amenities include: Free High-Speed WiFi, State-of-the-art Fitness Center, Rooftop Swimming Pool, Full-Service Spa, Fine Dining Restaurant, 24/7 Room Service, Business Center, Concierge Services, Valet Parking, and Airport Shuttle. What would you like to know more about?",
+  checkin: "Check-in time is 3:00 PM and check-out is 11:00 AM. Early check-in and late check-out are available upon request (subject to availability). We offer express check-in/out for your convenience.",
+  location: "AMASSAH LODGE is conveniently located in the heart of downtown, just 5 minutes from major shopping districts, 10 minutes from business centers, and 25 minutes from the airport. We're walking distance to restaurants, theaters, and attractions.",
+  booking: "You can make a reservation through our website, call us at +1 (555) 123-4567, or book through major travel platforms. We offer flexible rates and special packages. Would you like help with a specific booking?",
+  spa: "Our luxury spa offers massage therapy, facial treatments, body wraps, manicure/pedicure services, and wellness packages. Operating hours: 8:00 AM - 8:00 PM daily. Would you like to know about specific treatments?",
+  restaurant: "Our award-winning restaurant 'Garden Terrace' serves contemporary cuisine with locally-sourced ingredients. Open for breakfast (6:30-10:30 AM), lunch (11:30 AM-2:30 PM), and dinner (6:00-10:00 PM). We also offer in-room dining 24/7.",
+  pool: "Our rooftop pool is open daily from 6:00 AM to 10:00 PM, featuring stunning city views, poolside service, and a separate children's area. Pool towels and loungers are complimentary.",
+  wifi: "We provide complimentary high-speed WiFi throughout the hotel, including all rooms, public areas, and meeting spaces. Business center computers are also available 24/7.",
+  parking: "We offer both valet parking ($35/night) and self-parking ($25/night). Electric vehicle charging stations are available. Parking validation is provided for restaurant and spa guests.",
+  airport: "Our complimentary airport shuttle runs every 30 minutes from 5:00 AM to 11:00 PM. The journey takes approximately 25 minutes. Please call ahead to reserve your spot.",
+  pets: "We welcome pets up to 50 lbs with a $75 pet fee per stay. Pet amenities include bedding, bowls, and treats. Please inform us during booking to ensure pet-friendly room assignment.",
+  default: "I'm here to help! You can ask me about rooms, amenities, check-in times, location, booking, spa services, dining, or any other hotel services. What would you like to know?"
 };

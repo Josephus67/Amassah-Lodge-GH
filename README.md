@@ -1,7 +1,7 @@
 
   # Hotel Website SPA Rewrite
 
-  This is a code bundle for Hotel Website SPA Rewrite. The original project is available at https://www.figma.com/design/pDQKpBozRNry31VlZoj7v0/Hotel-Website-SPA-Rewrite.
+  AMASSAH-LODGE-GH
 
   ## Running the code
 

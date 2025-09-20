@@ -49,13 +49,27 @@ export interface InventoryRoom extends Room {
   occupancyRate: number;
 }
 
-export interface ChatbotResponse {
-  trigger: string;
-  response: string;
+export interface ChatbotResponses {
+  [key: string]: string;
+  hello: string;
+  hi: string;
+  rooms: string;
+  amenities: string;
+  checkin: string;
+  location: string;
+  booking: string;
+  spa: string;
+  restaurant: string;
+  pool: string;
+  wifi: string;
+  parking: string;
+  airport: string;
+  pets: string;
+  default: string;
 }
 
 export declare const rooms: Room[];
 export declare const reviews: Review[];
 export declare const blogPosts: BlogPost[];
 export declare const specialOffers: SpecialOffer[];
-export declare const chatbotResponses: ChatbotResponse[];
+export declare const chatbotResponses: ChatbotResponses;
