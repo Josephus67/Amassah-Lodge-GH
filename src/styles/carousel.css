@@ -1,0 +1,157 @@
+/* React Slick Carousel Styles */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  outline: none;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.slick-loading .slick-loading {
+  display: block;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+/* Custom arrow styles */
+.slick-arrow {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.slick-arrow:hover {
+  background: #00cccc;
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slick-prev {
+  left: -22px;
+}
+
+.slick-next {
+  right: -22px;
+}
+
+.slick-arrow:before {
+  font-size: 18px;
+  color: #333;
+}
+
+.slick-arrow:hover:before {
+  color: white;
+}
+
+/* Custom dots */
+.slick-dots {
+  display: block;
+  position: relative;
+  bottom: 0;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: #ccc;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.slick-dots li.slick-active button,
+.slick-dots li button:hover {
+  background: #00cccc;
+}
+
+@media (max-width: 768px) {
+  .slick-arrow {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .slick-prev {
+    left: -18px;
+  }
+  
+  .slick-next {
+    right: -18px;
+  }
+}
