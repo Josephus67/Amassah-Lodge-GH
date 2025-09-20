@@ -53,7 +53,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
             <div className="flex items-center space-x-2 text-lg">
               <MapPin className="w-5 h-5 text-teal-400" />
-              <span>Prime City Location</span>
+              <span>Prime City Location-Walewale</span>
             </div>
             <div className="flex items-center space-x-2 text-lg">
               <Calendar className="w-5 h-5 text-teal-400" />

@@ -178,7 +178,7 @@ export function ReservationForm() {
                     id="phone"
                     type="tel"
                     {...register('phone', { required: 'Phone number is required' })}
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="+233 559823861"
                     className={`pl-10 ${errors.phone ? 'border-red-500' : ''}`}
                   />
                 </div>

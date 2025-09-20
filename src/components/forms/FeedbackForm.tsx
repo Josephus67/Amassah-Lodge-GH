@@ -168,15 +168,15 @@ export function FeedbackForm() {
             <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+233 559823861</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>info@amassahlodge.com</span>
+                <span>bawahjosephus67@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4" />
-                <span>123 Luxury Avenue, City Center</span>
+                <span>Walewale, Kukuazugu</span>
               </div>
             </div>
           </div>
